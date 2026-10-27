@@ -64,6 +64,7 @@ func main() {
 	for _, status := range statuses {
 		counts[status]++
 	}
+
 	fmt.Printf("Стаитистика: new=%d, in_progress=%d, done=%d\n", counts["new"], counts["in_progress"], counts["done"])
 	// TODO: выведите new, in_progress, done в фиксированном порядке.
 	target := "done"
