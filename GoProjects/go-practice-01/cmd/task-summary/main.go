@@ -2,10 +2,7 @@ package main
 
 import "fmt"
 
-// statusLabel превращает код статуса в понятную человеку подпись.
 func statusLabel(status string) string {
-	// TODO: обработайте new, in_progress, done через switch.
-	// TODO: предусмотрите ветку default для незнакомого статуса.
 	switch status {
 	case "new":
 		return "Новая"
@@ -37,10 +34,7 @@ func completionPercent(statuses []string) float64 {
 	return 100 * float64(counts["done"]) / float64(len(statuses))
 }
 
-// countStatus считает количество элементов с заданным статусом.
 func countStatus(statuses []string, target string) int {
-	// TODO: пройдите по срезу через for range.
-	// TODO: сравните каждый элемент с target и верните счётчик.
 	count := 0
 	for _, status := range statuses {
 		if status == target {
@@ -66,7 +60,6 @@ func main() {
 	}
 
 	fmt.Printf("Стаитистика: new=%d, in_progress=%d, done=%d\n", counts["new"], counts["in_progress"], counts["done"])
-	// TODO: выведите new, in_progress, done в фиксированном порядке.
 	target := "done"
 	fmt.Printf("Первое вхождение %s находится под индексом %d\n", target, findStatus(statuses, target))
 	fmt.Printf("Доля выполненных задач составляет %.1f\n", completionPercent(statuses))
