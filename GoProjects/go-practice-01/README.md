@@ -42,7 +42,7 @@ go run ./cmd/card/
 go run ./cmd/time-converter/
 ```
 
-## Задание второй практической работы
+### Задание второй практической работы
 ```
 go run ./cmd/task-summary
 ```
